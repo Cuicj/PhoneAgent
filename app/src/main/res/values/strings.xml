@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">基础 App</string>
+    <string name="title_home">首页</string>
+    <string name="title_explore">探索</string>
+    <string name="title_profile">我的</string>
+
+    <string name="home_title">欢迎使用基础 App</string>
+    <string name="home_desc">这是首页内容，可以在这里替换成你的业务模块。</string>
+    <string name="explore_title">探索</string>
+    <string name="explore_desc">在这里放置列表、搜索或推荐等内容。</string>
+    <string name="profile_title">我的</string>
+    <string name="profile_desc">在这里放置个人信息、设置与登录状态。</string>
+</resources>

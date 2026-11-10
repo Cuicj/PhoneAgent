@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="brand_on_primary">#FFFFFF</color>
+    <color name="brand_on_primary_container">#041E49</color>
+    <color name="brand_on_secondary">#FFFFFF</color>
+    <color name="brand_on_secondary_container">#001D35</color>
+    <color name="brand_primary">#0B57D0</color>
+    <color name="brand_primary_container">#D3E3FD</color>
+    <color name="brand_secondary">#00639B</color>
+    <color name="brand_secondary_container">#C2E7FF</color>
+    <string name="app_name">基础 App</string>
+    <string name="explore_desc">在这里放置列表、搜索或推荐等内容。</string>
+    <string name="explore_title">探索</string>
+    <string name="home_desc">这是首页内容，可以在这里替换成你的业务模块。</string>
+    <string name="home_title">欢迎使用基础 App</string>
+    <string name="profile_desc">在这里放置个人信息、设置与登录状态。</string>
+    <string name="profile_title">我的</string>
+    <string name="title_explore">探索</string>
+    <string name="title_home">首页</string>
+    <string name="title_profile">我的</string>
+    <style name="Theme.BaseApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/brand_primary</item>
+        <item name="colorOnPrimary">@color/brand_on_primary</item>
+        <item name="colorPrimaryContainer">@color/brand_primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/brand_on_primary_container</item>
+        <item name="colorSecondary">@color/brand_secondary</item>
+        <item name="colorOnSecondary">@color/brand_on_secondary</item>
+        <item name="colorSecondaryContainer">@color/brand_secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/brand_on_secondary_container</item>
+    </style>
+</resources>

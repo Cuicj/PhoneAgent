@@ -1,0 +1,98 @@
+[
+    {
+        "merged": "com.example.baseapp-debug-43:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.example.baseapp-main-45:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.baseapp-debug-43:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.example.baseapp-main-45:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.baseapp-debug-43:/navigation_nav_graph.xml.flat",
+        "source": "com.example.baseapp-main-45:/navigation/nav_graph.xml"
+    },
+    {
+        "merged": "com.example.baseapp-debug-43:/layout_fragment_explore.xml.flat",
+        "source": "com.example.baseapp-main-45:/layout/fragment_explore.xml"
+    },
+    {
+        "merged": "com.example.baseapp-debug-43:/layout_fragment_home.xml.flat",
+        "source": "com.example.baseapp-main-45:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.example.baseapp-debug-43:/menu_bottom_nav_menu.xml.flat",
+        "source": "com.example.baseapp-main-45:/menu/bottom_nav_menu.xml"
+    },
+    {
+        "merged": "com.example.baseapp-debug-43:/drawable_ic_explore.xml.flat",
+        "source": "com.example.baseapp-main-45:/drawable/ic_explore.xml"
+    },
+    {
+        "merged": "com.example.baseapp-debug-43:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.example.baseapp-main-45:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.baseapp-debug-43:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.baseapp-main-45:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.baseapp-debug-43:/xml_backup_rules.xml.flat",
+        "source": "com.example.baseapp-main-45:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.baseapp-debug-43:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.example.baseapp-main-45:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.baseapp-debug-43:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.example.baseapp-main-45:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.baseapp-debug-43:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.example.baseapp-main-45:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.baseapp-debug-43:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.baseapp-main-45:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.baseapp-debug-43:/drawable_ic_profile.xml.flat",
+        "source": "com.example.baseapp-main-45:/drawable/ic_profile.xml"
+    },
+    {
+        "merged": "com.example.baseapp-debug-43:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.example.baseapp-main-45:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.baseapp-debug-43:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.baseapp-main-45:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.baseapp-debug-43:/drawable_ic_home.xml.flat",
+        "source": "com.example.baseapp-main-45:/drawable/ic_home.xml"
+    },
+    {
+        "merged": "com.example.baseapp-debug-43:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.example.baseapp-main-45:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.baseapp-debug-43:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.example.baseapp-main-45:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.baseapp-debug-43:/layout_fragment_profile.xml.flat",
+        "source": "com.example.baseapp-main-45:/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "com.example.baseapp-debug-43:/layout_activity_main.xml.flat",
+        "source": "com.example.baseapp-main-45:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.baseapp-debug-43:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.example.baseapp-main-45:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.baseapp-debug-43:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.baseapp-main-45:/xml/data_extraction_rules.xml"
+    }
+]
