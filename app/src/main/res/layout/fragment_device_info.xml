@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/deviceRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/page_horizontal_padding"
+        android:paddingTop="@dimen/page_top_padding"
+        android:paddingEnd="@dimen/page_horizontal_padding"
+        android:paddingBottom="@dimen/page_bottom_padding">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/device_intro"
+            android:textAppearance="?attr/textAppearanceBodySmall"
+            android:textColor="?attr/colorOnSurfaceVariant" />
+
+        <!-- 电池广播刷新说明：显示最近一次刷新时间 -->
+        <TextView
+            android:id="@+id/updateStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:textAppearance="?attr/textAppearanceBodySmall"
+            android:textColor="?attr/colorOnSurfaceVariant" />
+
+        <!-- 复制全部信息：主色按钮，不使用绿色 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/copyAllButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/device_copy_all"
+            app:backgroundTint="@color/brand_primary"
+            app:cornerRadius="12dp" />
+
+        <!-- 分组卡片容器：品牌型号 / 芯片 / 电池 / 系统 -->
+        <LinearLayout
+            android:id="@+id/groupContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <!-- 未授权时显示：申请读取电话状态权限以便尝试读取序列号 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/serialPermissionButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/device_serial_request"
+            android:visibility="gone"
+            app:backgroundTint="@color/brand_primary"
+            app:cornerRadius="12dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/device_footer_note"
+            android:textAppearance="?attr/textAppearanceBodySmall"
+            android:textColor="?attr/colorOnSurfaceVariant" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

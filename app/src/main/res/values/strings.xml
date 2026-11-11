@@ -11,4 +11,595 @@
     <string name="explore_desc">在这里放置列表、搜索或推荐等内容。</string>
     <string name="profile_title">我的</string>
     <string name="profile_desc">在这里放置个人信息、设置与登录状态。</string>
+
+    <!-- 文件版本记录 -->
+    <string name="title_files">文件</string>
+    <string name="files_hint">导入图片即记录为原始版本；之后每次选择修改后的图片，都会按时间顺序追加一个新版本。所有数据只保存在本机，长按文件可删除记录。</string>
+    <string name="files_storage_usage">共 %1$d 个文件 · 本地占用 %2$s</string>
+    <string name="file_versions_count">%1$d 个版本</string>
+    <string name="file_latest_time">最新记录 %1$s</string>
+    <string name="files_empty">还没有文件记录\n点击右下角导入一张图片开始记录版本</string>
+    <string name="files_import">导入图片</string>
+    <string name="import_original_success">已记录原始图片</string>
+    <string name="import_failed">导入失败：%1$s</string>
+    <string name="importing">导入中…</string>
+    <string name="history_summary">共 %1$d 条时间线记录，按时间顺序排列</string>
+    <string name="history_hint">点击图片查看大图；长按版本可以回退到该版本或删除记录。</string>
+    <string name="history_add_version">记录新版本</string>
+    <string name="history_empty">该图片来自外部导入，暂无历史记录\n在本应用中记录新版本后，会自动生成版本时间线</string>
+    <string name="version_label">第 %1$d 版</string>
+    <string name="version_added_success">已记录为第 %1$d 版</string>
+    <string name="version_actions_title">第 %1$d 版</string>
+    <string name="action_revert">回退到此版本</string>
+    <string name="action_delete_version">删除该版本</string>
+    <string name="action_failed">操作失败：%1$s</string>
+    <string name="revert_success">已回退为第 %1$d 版</string>
+    <string name="delete_version_success">已删除第 %1$d 版</string>
+    <string name="deleted_version_tip">该版本图片已删除</string>
+    <string name="deleted_image_placeholder">图片副本已删除</string>
+    <string name="op_original_import">原始导入</string>
+    <string name="op_add_version">追加新版本</string>
+    <string name="op_revert">回退到某版</string>
+    <string name="op_delete_version">删除版本</string>
+    <string name="flag_original">原始版本</string>
+    <string name="flag_latest">最新版本</string>
+    <string name="dialog_delete_file_title">删除文件记录</string>
+    <string name="dialog_delete_file_message">将删除「%1$s」的全部版本记录与图片副本，该操作不可恢复。</string>
+    <string name="dialog_delete_version_title">删除版本</string>
+    <string name="dialog_delete_version_message">将移除第 %1$d 版的图片副本，时间线保留一条删除记录，其他版本不受影响。</string>
+    <string name="action_cancel">取消</string>
+    <string name="action_delete">删除</string>
+    <string name="delete_success">已删除</string>
+    <string name="delete_failed">删除失败：%1$s</string>
+    <string name="history_title">版本历史</string>
+    <string name="delete_original_blocked">原始版本不能删除</string>
+    <string name="image_preview">版本图片预览</string>
+    <string name="preview_close_hint">点击任意位置关闭</string>
+    <string name="file_record_missing">文件记录不存在</string>
+
+    <!-- 外部访问事件与“可查看的应用”授权 -->
+    <string name="access_audit_notice">说明：Android 无法监听任意应用直接打开文件，只有经过本应用入口的访问才会被记录，其他访问无法捕获。</string>
+    <string name="access_event_read">「%1$s」读取了该文件</string>
+    <string name="access_event_read_version">「%1$s」读取了第 %2$d 版</string>
+    <string name="access_event_write">「%1$s」写入了该文件</string>
+    <string name="access_event_blocked">「%1$s」尝试访问被拒绝</string>
+    <string name="access_event_unknown_app">未知应用</string>
+    <string name="grant_section_title">可查看的应用</string>
+    <string name="grant_add">授权应用</string>
+    <string name="grant_empty">尚未授权任何应用；未授权的访问会被拒绝，并记录在时间线中。</string>
+    <string name="grant_time">授权于 %1$s</string>
+    <string name="grant_revoke">取消</string>
+    <string name="action_revoke_grant">取消授权</string>
+    <string name="grant_choose_title">选择要授权的应用</string>
+    <string name="grant_no_candidates">没有可授权的应用</string>
+    <string name="grant_success">已授权「%1$s」查看该文件</string>
+    <string name="grant_revoke_success">已取消「%1$s」的查看授权</string>
+    <string name="grant_failed">授权操作失败：%1$s</string>
+    <string name="dialog_revoke_title">取消查看授权</string>
+    <string name="dialog_revoke_message">「%1$s」将无法再通过本应用读取该文件。</string>
+    <string name="open_with_title">用其他应用打开</string>
+    <string name="open_with_empty">还没有已授权且可以打开图片的应用，请先在「可查看的应用」中授权。</string>
+    <string name="open_with_grant">去授权</string>
+    <string name="open_with_failed">无法打开：目标应用不可用</string>
+    <string name="open_with_no_version">当前没有可打开的版本</string>
+
+    <!-- 首页分组：按功能语义归组，首屏只呈现分组与紧凑入口 -->
+    <string name="home_group_device">设备体检</string>
+    <string name="home_group_security">安全检测</string>
+    <string name="home_group_tools">实用工具</string>
+    <string name="home_app_perm_title">应用权限总览</string>
+    <string name="home_app_perm_summary">已安装应用的权限声明与授予情况</string>
+    <string name="home_camera_summary">用后置摄像头观察暗处红外亮点</string>
+    <string name="home_wireless_summary">附近 WiFi 热点与蓝牙设备可疑特征</string>
+    <string name="home_device_summary">品牌型号、芯片、电池与系统版本</string>
+    <string name="home_sensor_summary">陀螺仪、指南针、海拔与分贝测量</string>
+    <string name="home_open_arrow">›</string>
+
+    <!-- 应用权限总览 -->
+    <string name="title_app_permission">应用权限总览</string>
+    <string name="home_app_perm_link">本机应用权限总览 ›</string>
+    <string name="home_app_perm_desc">查看当前设备已安装应用的权限声明，以及安装时即授予的权限。</string>
+    <string name="app_perm_search_hint">搜索应用名或包名</string>
+    <string name="app_perm_count">共 %1$d 个应用</string>
+    <string name="app_perm_item_summary">%1$d 项权限 · 危险 %2$d 项</string>
+    <string name="app_perm_empty">没有匹配的应用\n换个关键词或筛选条件试试</string>
+    <string name="app_perm_notice">Android 11 起，普通应用无法读取其他应用的运行时权限实际授予状态，本页只展示权限声明与安装时授予情况，不代表当前是否开启。</string>
+    <string name="app_perm_error">读取失败：%1$s</string>
+    <string name="app_perm_missing">应用信息不存在</string>
+    <string name="app_perm_detail_summary">%1$d 项权限 · 危险 %2$d 项 · 安装时授予 %3$d 项</string>
+    <string name="app_perm_detail_empty">该应用未声明任何权限</string>
+    <string name="app_perm_detail_version">版本 %1$s</string>
+    <string name="app_perm_detail_system">系统应用</string>
+    <string name="app_perm_detail_user">用户应用</string>
+    <string name="app_perm_detail_notice">说明：这里只能读到应用清单中「声明」的权限，以及安装时即授予的普通/签名级权限。运行时权限开关需要系统级权限才能读取，因此无法显示「当前是否开启」。</string>
+    <string name="perm_badge_dangerous">危险</string>
+    <string name="perm_badge_normal">普通</string>
+    <string name="perm_install_granted">安装时已授予</string>
+    <string name="perm_runtime_required">需用户授权</string>
+    <string name="perm_count">%1$d 项</string>
+    <string name="perm_category_storage">存储 / 媒体</string>
+    <string name="perm_category_camera">相机</string>
+    <string name="perm_category_microphone">麦克风</string>
+    <string name="perm_category_location">位置</string>
+    <string name="perm_category_contacts">通讯录</string>
+    <string name="perm_category_phone_sms">电话 / 短信</string>
+    <string name="perm_category_calendar">日历</string>
+    <string name="perm_category_sensors">传感器</string>
+    <string name="perm_category_notification">通知</string>
+    <string name="perm_category_other">其他</string>
+    <string name="perm_filter_all">全部</string>
+    <string name="perm_filter_storage">存储</string>
+    <string name="perm_filter_camera">相机</string>
+    <string name="perm_filter_microphone">麦克风</string>
+    <string name="perm_filter_location">定位</string>
+    <string name="perm_filter_contacts">通讯录</string>
+    <string name="perm_filter_phone_sms">电话 / 短信</string>
+    <string name="perm_filter_calendar">日历</string>
+    <string name="perm_filter_sensors">传感器</string>
+    <string name="perm_filter_notification">通知</string>
+
+    <!-- 红外功能 -->
+    <string name="home_ir_title">红外功能</string>
+    <string name="ir_supported">本机支持红外发射</string>
+    <string name="ir_unsupported">未检测到红外发射器</string>
+    <string name="ir_supported_desc">可发送 NEC 红外码遥控电视、空调、风扇与投影。</string>
+    <string name="ir_unsupported_reason">本机没有红外发射硬件，无法发送遥控信号；仍可查看编码说明与生活用途清单。</string>
+    <string name="ir_entry_link">查看红外功能 ›</string>
+    <string name="title_ir">红外功能</string>
+    <string name="title_ir_remote">红外遥控</string>
+    <string name="ir_remote_entry">红外遥控 ›</string>
+    <string name="ir_remote_entry_desc">内置示例 NEC 电源码，也支持手动输入地址/命令码。</string>
+    <string name="ir_life_title">生活中的红外</string>
+    <string name="ir_life_ac_tv">空调 / 电视遥控</string>
+    <string name="ir_life_ac_tv_desc">红外遥控器通过 NEC 等编码发送按键，手机有发射器时可替代遥控。</string>
+    <string name="ir_life_sensor">红外感应夜灯与感应开关</string>
+    <string name="ir_life_sensor_desc">人体靠近时由红外感应触发照明或开关，常见于楼道与卫生间。</string>
+    <string name="ir_life_robot">扫地机与自动门感应</string>
+    <string name="ir_life_robot_desc">部分扫地机、自动门使用红外避障或感应，注意不要遮挡其传感器。</string>
+    <string name="ir_life_thermo">红外测温（需外接）</string>
+    <string name="ir_life_thermo_desc">手机本身没有红外测温硬件，需外接红外测温模块或使用专用测温设备。</string>
+    <string name="ir_remote_no_hardware">本机没有红外发射器，无法发送信号。以下编码仅可查看，可作为其他带红外手机或外接发射器的参考。</string>
+    <string name="ir_remote_notice">以下为示例 NEC 编码，不同品牌、型号的电源键编码不同，不保证一次成功，需自行查码核对。</string>
+    <string name="ir_remote_preset_title">常见设备电源预设</string>
+    <string name="ir_remote_manual_title">手动发送</string>
+    <string name="ir_remote_manual_desc">支持十进制或以 0x 开头的十六进制；命令码取低 8 位，地址码超过 0xFF 时按扩展 NEC 发送。</string>
+    <string name="ir_remote_address">地址码</string>
+    <string name="ir_remote_command">命令码</string>
+    <string name="ir_remote_frequency">载波频率：38000 Hz（NEC 标准）</string>
+    <string name="ir_remote_send">发送红外信号</string>
+    <string name="ir_remote_send_unsupported">本机没有红外发射器，无法发送</string>
+    <string name="ir_remote_invalid_code">请输入有效的地址码（0–0xFFFF）与命令码（0–0xFF）</string>
+    <string name="ir_remote_freq_unsupported">设备不支持 38000 Hz 载波，已取消发送。支持范围：%1$s</string>
+    <string name="ir_remote_freq_unknown">无法获取设备支持的载波频率，已取消发送</string>
+    <string name="ir_remote_send_success">已发送 NEC 信号</string>
+    <string name="ir_remote_send_failed">发送失败：%1$s</string>
+    <string name="ir_preset_item_desc">地址 0x%1$04X · 命令 0x%2$02X</string>
+    <string name="ir_preset_send">发送 ›</string>
+    <string name="ir_filter_tv">电视</string>
+    <string name="ir_filter_ac">空调</string>
+    <string name="ir_filter_fan">风扇</string>
+    <string name="ir_filter_projector">投影</string>
+
+    <!-- 相机功能：暗光检测 -->
+    <string name="home_camera_title">相机</string>
+    <string name="home_camera_desc">用摄像头在暗光下观察红外亮点，帮助寻找隐藏摄像头。</string>
+    <string name="home_camera_link">查看相机功能 ›</string>
+    <string name="title_camera">相机</string>
+    <string name="title_camera_detector">暗光检测</string>
+    <string name="camera_home_title">暗光检测</string>
+    <string name="camera_home_intro">用手机后置摄像头观察暗处的红外亮点，帮助寻找隐藏摄像头；这是相机传感器的特性，不依赖红外发射器。</string>
+    <string name="camera_detector_entry">打开暗光检测 ›</string>
+    <string name="camera_detector_entry_desc">进入全屏相机预览，可调节增益与对比度，增强暗处亮点。</string>
+    <string name="camera_hidden_title">寻找隐藏摄像头</string>
+    <string name="camera_hidden_desc">关灯后用相机缓慢扫描房间、插座、烟雾报警器与正对床铺的摆件，隐藏摄像头的红外补光会呈现紫白色亮点。</string>
+    <string name="camera_principle_title">原理说明</string>
+    <string name="camera_principle_desc">多数手机摄像头能捕捉人眼看不到的红外光，暗环境下红外补光更明显，因此可在屏幕中看到亮点；部分机型红外滤镜较强，可能看不到。</string>
+    <string name="camera_detector_steps">使用步骤：关灯或调暗环境 → 缓慢扫描房间 → 观察屏幕中的紫白色亮点 → 靠近确认是否为摄像头。</string>
+    <string name="camera_detector_dark_hint">关灯模式：暗环境下红外亮点更明显</string>
+    <string name="camera_detector_misjudge">误判提示：反光、指示灯、烟雾报警器指示灯也会出现亮点，请靠近确认；部分手机摄像头对红外不敏感，可能看不到。</string>
+    <string name="camera_detector_permission_title">需要相机权限</string>
+    <string name="camera_detector_permission_desc">暗光检测需要使用后置摄像头观察红外亮点，画面只在本地实时处理，不会保存或上传。</string>
+    <string name="camera_detector_grant">授予相机权限</string>
+    <string name="camera_detector_gain">增益 %1$.1fx</string>
+    <string name="camera_detector_contrast">对比度 %1$.1fx</string>
+    <string name="camera_detector_camera_failed">相机启动失败：%1$s</string>
+
+    <!-- 无线安全检查：总览 -->
+    <string name="home_wireless_title">无线安全检查</string>
+    <string name="home_wireless_desc">检查附近 WiFi 热点与蓝牙设备的可疑特征。</string>
+    <string name="home_wireless_link">查看无线安全检查 ›</string>
+    <string name="title_wireless">无线安全检查</string>
+    <string name="title_wifi_scan">WiFi 扫描</string>
+    <string name="title_bt_scan">蓝牙扫描</string>
+    <string name="wireless_home_intro">检查附近 WiFi 热点与蓝牙设备的可疑特征。结果仅供排查参考，不等同于专业安全检测。</string>
+    <string name="wireless_wifi_title">WiFi 扫描</string>
+    <string name="wireless_wifi_entry">进入 WiFi 扫描 ›</string>
+    <string name="wireless_bt_title">蓝牙扫描</string>
+    <string name="wireless_bt_entry">进入蓝牙扫描 ›</string>
+    <string name="wireless_wifi_enabled">Wi‑Fi 已开启</string>
+    <string name="wireless_wifi_disabled_home">Wi‑Fi 未开启</string>
+    <string name="wireless_wifi_unsupported">本机不支持 WiFi</string>
+    <string name="wireless_wifi_state_unknown">Wi‑Fi 状态未知</string>
+    <string name="wireless_bt_enabled">蓝牙已开启</string>
+    <string name="wireless_bt_disabled_home">蓝牙未开启</string>
+    <string name="wireless_bt_unsupported_home">本机不支持蓝牙</string>
+    <string name="wireless_bt_state_unknown">蓝牙状态未知</string>
+    <string name="wireless_permission_granted">扫描权限已授予</string>
+    <string name="wireless_permission_missing">扫描权限未授予</string>
+    <string name="wireless_last_scan_none">最近扫描：暂无</string>
+    <string name="wireless_last_scan_time">最近扫描：%1$s</string>
+    <string name="wireless_boundary_title">能力边界</string>
+    <string name="wireless_boundary_lan">Android 普通应用无法扫描同一 WiFi 网络下的其他设备，也无法读取 ARP 表，因此本模块不提供「局域网设备发现」。</string>
+    <string name="wireless_boundary_mac">蓝牙地址在多数新系统上是随机 MAC，无法据此反查真实设备身份。</string>
+    <string name="wireless_boundary_oui">风险判定基于系统公开扫描结果与本地 OUI 码库，可能存在误判，仅供参考。</string>
+
+    <!-- 无线安全检查：扫描与筛选 -->
+    <string name="wireless_grant_permission">授予权限</string>
+    <string name="wireless_scan_start">开始扫描</string>
+    <string name="wireless_scan_again">重新扫描</string>
+    <string name="wireless_scanning">扫描中…</string>
+    <string name="wireless_filter_all">全部</string>
+    <string name="wireless_risk_high">高风险</string>
+    <string name="wireless_risk_watch">留意</string>
+    <string name="wireless_risk_normal">正常</string>
+    <string name="wireless_scan_summary">共 %1$d 条 · 高风险 %2$d · 留意 %3$d</string>
+    <string name="wireless_wifi_empty">没有扫描到热点。可能是附近没有 WiFi、系统限制了扫描频率，或结果尚未返回，可稍后重试。</string>
+    <string name="wireless_wifi_empty_location">系统定位开关已关闭，旧版 Android 会因此返回空结果，请开启定位后重试。</string>
+    <string name="wireless_wifi_empty_permission">未授予 WiFi 扫描权限，请点击上方按钮授权。</string>
+    <string name="wireless_wifi_disabled">Wi‑Fi 未开启，请先在系统设置中打开 Wi‑Fi。</string>
+    <string name="wireless_wifi_throttled">系统限制了主动扫描，以下为最近一次缓存结果。</string>
+    <string name="wireless_wifi_scan_failed">无法启动扫描：%1$s</string>
+    <string name="wireless_wifi_scan_done">扫描完成，共发现 %1$d 个热点</string>
+    <string name="wireless_bt_empty">没有发现蓝牙设备。请确认蓝牙已开启、附近设备处于可发现状态后重试。</string>
+    <string name="wireless_bt_disabled">蓝牙未开启，请先在系统设置中打开蓝牙。</string>
+    <string name="wireless_bt_unsupported">本机不支持蓝牙。</string>
+    <string name="wireless_bt_scan_hint">持续扫描约 12 秒，期间同时进行经典蓝牙发现与 BLE 扫描。</string>
+    <string name="wireless_bt_scan_done">扫描结束，共发现 %1$d 个设备</string>
+    <string name="wireless_wifi_permission_title">需要 WiFi 扫描权限</string>
+    <string name="wireless_wifi_permission_desc">Android 13 及以上需要「附近的设备」权限，低版本需要定位权限，仅用于读取附近热点列表。</string>
+    <string name="wireless_bt_permission_title">需要蓝牙扫描权限</string>
+    <string name="wireless_bt_permission_desc">Android 12 及以上需要蓝牙扫描与连接权限，低版本需要定位权限，仅用于发现附近设备。</string>
+    <string name="wireless_permission_denied">权限被拒绝，可点击按钮重新授权，或前往系统设置手动开启。</string>
+    <string name="wireless_permission_settings">前往系统设置</string>
+
+    <!-- 无线安全检查：列表与详情 -->
+    <string name="wireless_wifi_bssid">BSSID %1$s · %2$s</string>
+    <string name="wireless_wifi_meta">%1$d dBm · %2$s · %3$s</string>
+    <string name="wireless_bt_address">地址 %1$s · %2$s</string>
+    <string name="wireless_bt_random_mac">随机地址</string>
+    <string name="wireless_bt_meta">%1$d dBm · %2$s · %3$s</string>
+    <string name="wireless_bt_uuid">服务：%1$s</string>
+    <string name="wireless_bt_uuid_none">服务：未获取</string>
+    <string name="wireless_bt_connectable_yes">可连接</string>
+    <string name="wireless_bt_connectable_no">不可连接</string>
+    <string name="wireless_bt_connectable_unknown">连接性未知</string>
+    <string name="wireless_bt_type_classic">经典蓝牙</string>
+    <string name="wireless_bt_type_ble">低功耗</string>
+    <string name="wireless_bt_type_both">经典 + BLE</string>
+    <string name="wireless_detail_title">判定原因</string>
+    <string name="wireless_detail_ok">知道了</string>
+    <string name="wireless_detail_no_reason">未发现明显可疑特征。</string>
+    <string name="wireless_reason_prefix">判定：%1$s</string>
+    <string name="wireless_wifi_boundary">说明：Android 普通应用无法扫描同一 WiFi 网络下的其他设备，也无法读取 ARP 表，因此不提供局域网设备发现；扫描结果可能受系统限流影响。</string>
+    <string name="wireless_bt_boundary">说明：蓝牙地址在多数新系统上为随机 MAC，无法据此反查真实身份；单次扫描约 12 秒，结果仅供参考。</string>
+    <string name="wireless_filter_empty">当前筛选下没有结果，可切换到「全部」查看。</string>
+
+    <!-- 传感器模块：首页入口与总览 -->
+    <string name="home_sensor_title">传感器</string>
+    <string name="home_sensor_desc">陀螺仪、指南针、海拔与分贝测量，并附带本机传感器自检清单。</string>
+    <string name="home_sensor_link">查看传感器功能 ›</string>
+    <string name="title_sensor">传感器</string>
+    <string name="title_sensor_gyro">陀螺仪</string>
+    <string name="title_sensor_compass">指南针</string>
+    <string name="title_sensor_altitude">海拔</string>
+    <string name="title_sensor_sound">分贝</string>
+    <string name="title_sensor_check">传感器自检</string>
+    <string name="sensor_home_intro">以下功能直接读取本机传感器与麦克风；硬件缺失时会给出说明，不使用假数据填充界面。模拟器可能没有传感器或返回异常值。</string>
+    <string name="sensor_home_gyro_desc">实时读取三轴角速度，显示采样率与数值条。</string>
+    <string name="sensor_home_compass_desc">用加速度计与磁力计计算方位角，带刻度盘与校准提示。</string>
+    <string name="sensor_home_altitude_desc">优先用气压计换算海拔，无气压计时退回 GPS 高度。</string>
+    <string name="sensor_home_sound_desc">用麦克风估算相对声压级，显示实时值、峰值与均值。</string>
+    <string name="sensor_home_entry">进入 ›</string>
+    <string name="sensor_home_check_title">传感器自检清单</string>
+    <string name="sensor_home_check_desc">列出本机全部可用传感器，并单独提示关键传感器缺失情况。</string>
+    <string name="sensor_home_check_link">查看传感器自检清单 ›</string>
+    <string name="sensor_home_boundary">说明：Android 只能读取系统暴露的传感器，部分机型会隐藏或虚拟化传感器；模拟器通常缺少陀螺仪、磁力计与气压计。</string>
+
+    <!-- 传感器权限按钮 -->
+    <string name="sensor_grant_permission">授予权限</string>
+
+    <!-- 传感器状态文案 -->
+    <string name="sensor_state_available">可用</string>
+    <string name="sensor_state_unavailable">不可用</string>
+    <string name="sensor_state_barometer">气压计可用</string>
+    <string name="sensor_state_gps_only">仅 GPS 高度</string>
+    <string name="sensor_state_no_altitude">无高度来源</string>
+    <string name="sensor_state_sound_ok">麦克风已授权</string>
+    <string name="sensor_state_sound_perm">需麦克风权限</string>
+    <string name="sensor_state_sound_none">无麦克风硬件</string>
+    <string name="sensor_home_summary">陀螺仪 %1$s · 指南针 %2$s · 海拔 %3$s · 分贝 %4$s</string>
+
+    <!-- 陀螺仪 -->
+    <string name="sensor_gyro_unavailable_title">本机没有陀螺仪</string>
+    <string name="sensor_gyro_unavailable_desc">未检测到 TYPE_GYROSCOPE 传感器，无法读取角速度。部分模拟器与低端设备不提供该硬件。</string>
+    <string name="sensor_gyro_live_title">实时三轴角速度</string>
+    <string name="sensor_gyro_rate">采样率：注册 %1$d ms（标称 %2$d Hz）· 实测 %3$.1f Hz</string>
+    <string name="sensor_gyro_rate_max">传感器最大采样率约 %1$.0f Hz</string>
+    <string name="sensor_gyro_detail">厂商 %1$s · 最大量程 ±%2$s rad/s · 分辨率 %3$s</string>
+    <string name="sensor_gyro_value">%1$s  %2$+.3f rad/s（%3$+.1f °/s）</string>
+    <string name="sensor_gyro_value_empty">%1$s  --</string>
+    <string name="sensor_gyro_scale_note">数值条量程固定为 ±5 rad/s，超出时显示为满格。</string>
+
+    <!-- 指南针 -->
+    <string name="sensor_compass_unavailable_title">指南针不可用</string>
+    <string name="sensor_compass_unavailable_mag">本机未检测到磁力计（TYPE_MAGNETIC_FIELD），无法计算方位角。</string>
+    <string name="sensor_compass_unavailable_accel">本机未检测到加速度计（TYPE_ACCELEROMETER），无法确定设备姿态。</string>
+    <string name="sensor_compass_unavailable_both">指南针需要加速度计与磁力计同时可用；本机缺少：%1$s。</string>
+    <string name="sensor_compass_azimuth">%1$.1f°</string>
+    <string name="sensor_compass_accuracy">磁力计精度：%1$s</string>
+    <string name="sensor_compass_accuracy_high">高</string>
+    <string name="sensor_compass_accuracy_medium">中</string>
+    <string name="sensor_compass_accuracy_low">低</string>
+    <string name="sensor_compass_accuracy_unreliable">不可靠</string>
+    <string name="sensor_compass_accuracy_unknown">未知</string>
+    <string name="sensor_compass_calibrate">请远离磁铁、金属与电器，并在空中缓慢画「8」字完成校准。</string>
+    <string name="sensor_compass_interference">磁场干扰较大，方位角可能明显偏差：请远离金属与磁源，并做 8 字校准。</string>
+    <string name="sensor_compass_waiting">正在等待传感器数据…</string>
+    <string name="sensor_compass_note">方位角由加速度计与磁力计融合计算，设备附近有磁性物体会影响读数。</string>
+    <string-array name="sensor_compass_directions">
+        <item>北</item>
+        <item>东北</item>
+        <item>东</item>
+        <item>东南</item>
+        <item>南</item>
+        <item>西南</item>
+        <item>西</item>
+        <item>西北</item>
+    </string-array>
+
+    <!-- 海拔 -->
+    <string name="sensor_altitude_pressure_mode">气压计可用（TYPE_PRESSURE）</string>
+    <string name="sensor_altitude_pressure_desc">优先使用气压计，按国际标准大气公式换算高度。</string>
+    <string name="sensor_altitude_gps_mode">本机没有气压计，改用 GPS 定位高度</string>
+    <string name="sensor_altitude_gps_desc">GPS 高度精度较差，通常误差在 10 米以上，需要定位权限与开阔天空。</string>
+    <string name="sensor_altitude_pressure_value">气压 %1$.2f hPa</string>
+    <string name="sensor_altitude_value">气压高度 %1$.1f m</string>
+    <string name="sensor_altitude_relative">相对高度 %1$+.1f m（相对基准）</string>
+    <string name="sensor_altitude_relative_none">相对高度 --（等待第一次采样）</string>
+    <string name="sensor_altitude_reset">重置相对高度基准</string>
+    <string name="sensor_altitude_formula">换算公式：h = 44330 × (1 − (p / 1013.25)^(1/5.255))，p 为当前气压（hPa）；天气变化会带来数米误差。</string>
+    <string name="sensor_altitude_gps_value">GPS 高度 %1$.1f m</string>
+    <string name="sensor_altitude_gps_waiting">正在等待 GPS 定位…请到室外空旷处并保持等待。</string>
+    <string name="sensor_altitude_gps_no_altitude">当前定位没有高度信息，请到室外重试。</string>
+    <string name="sensor_altitude_gps_accuracy">垂直精度约 ±%1$.1f m</string>
+    <string name="sensor_altitude_gps_accuracy_unknown">垂直精度未知</string>
+    <string name="sensor_altitude_location_disabled">系统定位开关已关闭，请开启定位后重试。</string>
+    <string name="sensor_altitude_permission_title">需要定位权限</string>
+    <string name="sensor_altitude_permission_desc">仅用于读取 GPS 高度，不做后台定位，也不保存位置信息。</string>
+    <string name="sensor_altitude_permission_denied">定位权限被拒绝，可点击按钮重新授权，或前往系统设置手动开启。</string>
+    <string name="sensor_altitude_none_title">无法获取高度</string>
+    <string name="sensor_altitude_none_desc">本机没有气压计，也没有可用的 GPS 定位高度（缺少定位硬件、定位关闭或权限被拒绝），因此不显示高度数值，以免误导。</string>
+    <string name="sensor_altitude_gps_unavailable">本机没有 GPS 定位能力，无法获取 GPS 高度。</string>
+
+    <!-- 分贝 -->
+    <string name="sensor_sound_unavailable">本机没有麦克风硬件，无法测量分贝。</string>
+    <string name="sensor_sound_permission_title">需要麦克风权限</string>
+    <string name="sensor_sound_permission_desc">分贝测量需要录制音频，仅在本页面实时分析音量，不保存录音。</string>
+    <string name="sensor_sound_permission_denied">未授予麦克风权限，无法采集声音。可点击按钮重新授权，或前往系统设置开启。</string>
+    <string name="sensor_sound_value">%1$.1f dB</string>
+    <string name="sensor_sound_value_idle">-- dB</string>
+    <string name="sensor_sound_stats">峰值 %1$.1f dB · 均值 %2$.1f dB</string>
+    <string name="sensor_sound_stats_idle">峰值 -- dB · 均值 -- dB</string>
+    <string name="sensor_sound_samples">已分析 %1$d 个音频块</string>
+    <string name="sensor_sound_reset">重置统计</string>
+    <string name="sensor_sound_starting">正在启动麦克风…</string>
+    <string name="sensor_sound_running">正在采集，请勿遮挡麦克风。</string>
+    <string name="sensor_sound_error">无法启动录音：%1$s</string>
+    <string name="sensor_sound_notice">说明：数值为相对声压估算，未经校准，不能作为声级计用于噪声合规判定；不同设备的麦克风灵敏度差异较大，读数仅适合横向对比。</string>
+    <string name="sensor_sound_scale_note">强度条按 20–100 dB 映射，仅作示意。</string>
+
+    <!-- 传感器自检清单 -->
+    <string name="sensor_check_summary">本机可用传感器 %1$d 个</string>
+    <string name="sensor_check_missing_title">关键传感器缺失</string>
+    <string name="sensor_check_missing">缺少：%1$s。依赖这些传感器的页面会明确显示不可用，请以真机结果为准。</string>
+    <string name="sensor_check_all_present">加速度计、陀螺仪、磁力计、气压计均可用。</string>
+    <string name="sensor_check_empty">未读取到任何传感器，可能是模拟器限制或系统未提供。</string>
+    <string name="sensor_check_item_type">类型 %1$s</string>
+    <string name="sensor_check_item_vendor">厂商 %1$s</string>
+    <string name="sensor_check_item_spec">最大量程 %1$s · 分辨率 %2$s</string>
+    <string name="sensor_check_note">说明：最大量程与分辨率为系统上报的原始数值，单位随传感器类型不同。</string>
+    <string name="sensor_name_accelerometer">加速度计</string>
+    <string name="sensor_name_gyroscope">陀螺仪</string>
+    <string name="sensor_name_magnetometer">磁力计</string>
+    <string name="sensor_name_barometer">气压计</string>
+    <string name="sensor_name_light">光线传感器</string>
+    <string name="sensor_name_proximity">距离传感器</string>
+    <string name="sensor_name_gravity">重力传感器</string>
+    <string name="sensor_name_linear_acceleration">线性加速度</string>
+    <string name="sensor_name_rotation_vector">旋转矢量</string>
+    <string name="sensor_name_step_counter">计步器</string>
+    <string name="sensor_name_step_detector">步行检测</string>
+    <string name="sensor_name_heart_rate">心率传感器</string>
+    <string name="sensor_name_game_rotation_vector">游戏旋转矢量</string>
+    <string name="sensor_name_significant_motion">显著运动</string>
+    <string name="sensor_name_stationary_detect">静止检测</string>
+    <string name="sensor_name_motion_detect">运动检测</string>
+    <string name="sensor_name_humidity">湿度传感器</string>
+    <string name="sensor_name_ambient_temperature">环境温度</string>
+    <string name="sensor_name_pressure_altitude">气压高度</string>
+
+    <!-- 设备信息：首页入口 -->
+    <string name="home_device_title">设备信息</string>
+    <string name="home_device_desc">品牌型号、芯片、电池与循环次数、序列号、系统版本，可一键复制发给售后排查。</string>
+    <string name="home_device_link">查看设备信息 ›</string>
+    <string name="home_device_status">当前设备：%1$s · Android %2$s</string>
+    <string name="title_device">设备信息</string>
+
+    <!-- 设备信息：页面说明与操作 -->
+    <string name="device_intro">以下信息全部读取本机系统接口与可读系统属性；取不到的字段会标注「本机不提供」或「受系统限制」，不使用占位数据。长按任意位置或点击按钮可复制全部信息。</string>
+    <string name="device_update_status">电池数据随系统电池广播自动刷新 · 最近更新 %1$s</string>
+    <string name="device_copy_all">复制全部信息</string>
+    <string name="device_copy_done">已复制全部设备信息</string>
+    <string name="device_copy_failed">复制失败：系统剪贴板不可用</string>
+    <string name="device_copy_header">设备信息（采集时间：%1$s）</string>
+    <string name="device_footer_note">说明：Android 对序列号、电池设计容量、循环次数等做了权限与版本限制；不同厂商开放程度不同，取不到时会如实标注，不会伪造数据。</string>
+
+    <!-- 设备信息：通用取值 -->
+    <string name="device_value_not_provided">本机不提供</string>
+    <string name="device_value_not_provided_system">本机不提供（系统未公开该数据）</string>
+    <string name="device_value_unknown">未知</string>
+    <string name="device_value_source">%1$s（来源：%2$s）</string>
+
+    <!-- 设备信息：品牌与型号 -->
+    <string name="device_group_brand">品牌与型号</string>
+    <string name="device_row_brand">品牌</string>
+    <string name="device_row_manufacturer">厂商</string>
+    <string name="device_row_model">型号</string>
+    <string name="device_row_device">设备名</string>
+    <string name="device_row_product">产品名</string>
+    <string name="device_row_emulator">是否为模拟器</string>
+    <string name="device_row_emulator_rule">判定依据</string>
+    <string name="device_row_fingerprint">构建指纹</string>
+    <string name="device_emulator_yes">是（命中特征：%1$s）</string>
+    <string name="device_emulator_no">否（未命中模拟器特征）</string>
+    <string name="device_emulator_rule">按 FINGERPRINT、HARDWARE、MODEL、PRODUCT、BOARD 特征词以及 ro.kernel.qemu、ro.build.hv.platform 等虚拟化属性匹配，仅供排查参考，存在误判可能。</string>
+
+    <!-- 设备信息：芯片 -->
+    <string name="device_group_chip">芯片</string>
+    <string name="device_row_soc_manufacturer">芯片厂商</string>
+    <string name="device_row_soc_model">芯片型号</string>
+    <string name="device_row_hardware">硬件平台</string>
+    <string name="device_row_board">主板</string>
+    <string name="device_row_abi">支持的 ABI</string>
+    <string name="device_row_cpu_cores">CPU 核心数</string>
+    <string name="device_cpu_cores">%1$d 核</string>
+
+    <!-- 设备信息：电池 -->
+    <string name="device_group_battery">电池</string>
+    <string name="device_row_battery_level">当前电量</string>
+    <string name="device_row_battery_status">充电状态</string>
+    <string name="device_row_battery_plug">充电方式</string>
+    <string name="device_row_battery_health">电池健康</string>
+    <string name="device_row_battery_temp">温度</string>
+    <string name="device_row_battery_voltage">电压</string>
+    <string name="device_row_battery_tech">电池技术</string>
+    <string name="device_row_battery_design">设计容量</string>
+    <string name="device_row_battery_current">当前容量（近似）</string>
+    <string name="device_row_battery_cycle">电池循环次数</string>
+    <string name="device_battery_percent">%1$d%%</string>
+    <string name="device_battery_status_charging">正在充电</string>
+    <string name="device_battery_status_full">已充满</string>
+    <string name="device_battery_status_discharging">放电中</string>
+    <string name="device_battery_status_not_charging">未充电</string>
+    <string name="device_battery_plug_none">未连接电源</string>
+    <string name="device_battery_plug_ac">交流充电器（AC）</string>
+    <string name="device_battery_plug_usb">USB 充电</string>
+    <string name="device_battery_plug_wireless">无线充电</string>
+    <string name="device_battery_plug_dock">底座充电</string>
+    <string name="device_battery_health_good">良好</string>
+    <string name="device_battery_health_overheat">过热</string>
+    <string name="device_battery_health_dead">损坏</string>
+    <string name="device_battery_health_over_voltage">电压过高</string>
+    <string name="device_battery_health_cold">温度过低</string>
+    <string name="device_battery_health_failure">未指定故障</string>
+    <string name="device_battery_voltage">%1$.2f V（%2$d mV）</string>
+    <string name="device_battery_voltage_low">%1$d mV（系统上报值）</string>
+    <string name="device_battery_design_uah">%1$d mAh（系统节点，按 µAh 换算）</string>
+    <string name="device_battery_design_mah">%1$d mAh（系统节点）</string>
+    <string name="device_battery_current">%1$d mAh（电量计读数，非满电容量）</string>
+    <string name="device_battery_current_uah">%1$d µAh（电量计读数）</string>
+    <string name="device_battery_current_full_uah">%1$d mAh（满电节点，按 µAh 换算）</string>
+    <string name="device_battery_current_full_mah">%1$d mAh（满电节点）</string>
+    <string name="device_battery_cycle_count">%1$d 次</string>
+    <string name="device_battery_cycle_unsupported">本机不提供该数据（电池驱动未上报循环次数）</string>
+    <string name="device_battery_cycle_no_api">本机不提供该数据（需 Android 14 / API 34 及以上）</string>
+
+    <!-- 设备信息：系统版本与标识 -->
+    <string name="device_group_system">系统版本与标识</string>
+    <string name="device_row_android">Android 版本</string>
+    <string name="device_row_api">API 级别</string>
+    <string name="device_row_security">安全补丁日期</string>
+    <string name="device_row_kernel">内核版本</string>
+    <string name="device_row_build">编译号</string>
+    <string name="device_row_rom">厂商 ROM 版本</string>
+    <string name="device_row_serial">设备序列号（getSerial）</string>
+    <string name="device_row_build_serial">系统序列号属性（Build.SERIAL）</string>
+    <string name="device_row_android_id">Android ID（替代标识）</string>
+    <string name="device_row_serial_note">序列号读取说明</string>
+    <string name="device_rom_value">%1$s %2$s（属性 %3$s）</string>
+    <string name="device_rom_none">本机不提供（未找到厂商 ROM 版本属性）</string>
+    <string name="device_serial_no_permission">受系统限制（未授权 READ_PHONE_STATE，可点击下方按钮申请）</string>
+    <string name="device_serial_unknown">unknown（Android 10 起普通应用无法读取序列号）</string>
+    <string name="device_serial_restricted">受系统限制（SecurityException）</string>
+    <string name="device_build_serial_unknown">unknown（Android 8 起该属性固定返回 unknown）</string>
+    <string name="device_serial_note">读取序列号需要 READ_PHONE_STATE；即使授权，Android 10+ 普通应用通常仍返回 unknown，只有系统签名或特权应用才能拿到真实值。Android ID 可作为重装应用后相对稳定的参考标识。</string>
+    <string name="device_serial_request">申请读取电话状态权限（用于序列号）</string>
+    <string name="device_serial_permission_denied">未获得电话状态权限，序列号将无法读取；可在系统设置中手动授予。</string>
+
+    <!-- 无线安全检查：网络请求抓取 -->
+    <string name="title_capture">网络请求抓取</string>
+    <string name="title_capture_detail">请求详情</string>
+    <string name="wireless_capture_title">网络请求抓取</string>
+    <string name="wireless_capture_entry">进入请求抓取 ›</string>
+    <string name="wireless_capture_running">抓取中 · 已记录 %1$d 条</string>
+    <string name="wireless_capture_stopped">未开启 · 已记录 %1$d 条</string>
+    <string name="capture_switch_title">开启抓取</string>
+    <string name="capture_status_off">未开启</string>
+    <string name="capture_status_starting">正在启动 VPN…</string>
+    <string name="capture_status_waiting_vpn">等待 VPN 授权…</string>
+    <string name="capture_status_running">抓取中 · 已记录 %1$d 条</string>
+    <string name="capture_status_error">启动失败：%1$s</string>
+    <string name="capture_status_timeout">启动超时，未收到服务响应</string>
+    <string name="capture_status_failed">失败</string>
+    <string name="capture_status_done">已完成</string>
+    <string name="capture_in_progress">进行中</string>
+    <string name="capture_vpn_notice">会占用系统 VPN 位置，与其他 VPN 类应用冲突；关闭开关或离开本页会立即释放 tun。</string>
+    <string name="capture_vpn_denied">未授权 VPN，抓取未开启。再次打开开关可重新授权。</string>
+    <string name="capture_filter_hint">按域名或 IP 筛选</string>
+    <string name="capture_status_filter_desc">状态筛选</string>
+    <string name="capture_only_failed">只看失败</string>
+    <string name="capture_summary">共 %1$d 条 · 显示 %2$d 条 · 进行中 %3$d</string>
+    <string name="capture_empty">还没有记录\n开启上方开关，然后用浏览器或应用产生一些流量。</string>
+    <string name="capture_filter_empty">当前筛选下没有结果。</string>
+    <string name="capture_clear">清除</string>
+    <string name="capture_clear_title">清除全部记录</string>
+    <string name="capture_clear_message">将清空当前所有抓取记录，不影响抓取开关状态。是否继续？</string>
+    <string name="capture_clear_confirm">清除</string>
+    <string name="capture_cancel">取消</string>
+    <string name="capture_cleared">已清除全部记录</string>
+    <string name="capture_boundary">仅 IPv4 的 TCP/UDP。HTTP 可解析请求行、头部与可读文本正文；HTTPS 只能记录 SNI、时长与上下行字节，内容已加密无法解密；QUIC（UDP 443）仅记录流量元数据，gzip/chunked 正文未解码。</string>
+    <string name="capture_item_meta">%1$s · %2$d ms · ↑%3$s ↓%4$s</string>
+    <string name="capture_item_https_note">内容已加密，仅记录连接元数据</string>
+    <string name="capture_detail_summary">概要</string>
+    <string name="capture_detail_request">请求</string>
+    <string name="capture_detail_response">响应</string>
+    <string name="capture_detail_metadata">元数据</string>
+    <string name="capture_detail_summary_text">协议：%1$s\n目标：%2$s\n状态：%3$s\n时间：%4$s\n耗时：%5$d ms\n流量：上行 %6$s · 下行 %7$s</string>
+    <string name="capture_detail_request_line">%1$s %2$s</string>
+    <string name="capture_detail_response_status">状态码：%1$s</string>
+    <string name="capture_detail_status_unknown">未获取</string>
+    <string name="capture_detail_encrypted">内容已加密，无法解密：本工具未持有会话密钥，只能展示连接层面的元数据。</string>
+    <string name="capture_detail_https_response">HTTPS 内容已加密，无法解密。TLS 握手：%1$s</string>
+    <string name="capture_detail_body_unreadable">正文不可读（二进制、压缩或分块内容，未解码），大小见元数据中的下行字节。</string>
+    <string name="capture_detail_metadata_text">协议：%1$s\n目标端点：%2$s:%3$d\n开始时间：%4$s\n持续时长：%5$d ms\n流量：上行 %6$s · 下行 %7$s\nTLS 握手：%8$s\n状态：%9$s\n说明：%10$s</string>
+    <string name="capture_protocol_http">HTTP（明文）</string>
+    <string name="capture_protocol_https">HTTPS（TLS 加密）</string>
+    <string name="capture_protocol_tcp">TCP</string>
+    <string name="capture_protocol_udp">UDP</string>
+    <string name="capture_tls_not_applicable">不适用</string>
+    <string name="capture_record_gone">记录已不存在</string>
+    <string name="capture_record_gone_desc">该记录可能已被新的抓取记录覆盖（最多保留 300 条）。</string>
+    <string name="capture_notification_title">网络请求抓取运行中</string>
+    <string name="capture_notification_text">流量经本地 VPN 转发并记录，可在应用内关闭</string>
+    <string name="capture_channel_name">网络抓取</string>
+
+    <!-- 网络请求抓取：状态筛选选项 -->
+    <string-array name="capture_status_options">
+        <item>全部状态</item>
+        <item>2xx 成功</item>
+        <item>3xx 跳转</item>
+        <item>4xx 客户端错误</item>
+        <item>5xx 服务端错误</item>
+        <item>无状态码</item>
+    </string-array>
 </resources>

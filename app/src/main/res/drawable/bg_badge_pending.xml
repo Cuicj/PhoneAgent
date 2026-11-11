@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 需用户授权标签：暖色底，提示运行时授权状态未知 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/op_revert_container" />
+    <corners android:radius="6dp" />
+</shape>

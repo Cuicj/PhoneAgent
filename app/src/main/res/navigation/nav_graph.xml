@@ -9,7 +9,245 @@
         android:id="@+id/navigation_home"
         android:name="com.example.baseapp.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_navigation_home_to_appPermissionList"
+            app:destination="@id/appPermissionList" />
+
+        <action
+            android:id="@+id/action_navigation_home_to_irHome"
+            app:destination="@id/irHome" />
+
+        <action
+            android:id="@+id/action_navigation_home_to_cameraHome"
+            app:destination="@id/cameraHome" />
+
+        <action
+            android:id="@+id/action_navigation_home_to_wirelessHome"
+            app:destination="@id/wirelessHome" />
+
+        <action
+            android:id="@+id/action_navigation_home_to_sensorHome"
+            app:destination="@id/sensorHome" />
+
+        <action
+            android:id="@+id/action_navigation_home_to_deviceInfo"
+            app:destination="@id/deviceInfo" />
+    </fragment>
+
+    <!-- 红外功能：仅保留红外发射相关能力与生活用途说明 -->
+    <fragment
+        android:id="@+id/irHome"
+        android:name="com.example.baseapp.ui.ir.IrHomeFragment"
+        android:label="@string/title_ir"
+        tools:layout="@layout/fragment_ir_home">
+
+        <action
+            android:id="@+id/action_irHome_to_irRemote"
+            app:destination="@id/irRemote" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/irRemote"
+        android:name="com.example.baseapp.ui.ir.IrRemoteFragment"
+        android:label="@string/title_ir_remote"
+        tools:layout="@layout/fragment_ir_remote" />
+
+    <!-- 相机功能：基于摄像头对红外的敏感性做暗光检测 -->
+    <fragment
+        android:id="@+id/cameraHome"
+        android:name="com.example.baseapp.ui.camera.CameraHomeFragment"
+        android:label="@string/title_camera"
+        tools:layout="@layout/fragment_camera_home">
+
+        <action
+            android:id="@+id/action_cameraHome_to_cameraDetector"
+            app:destination="@id/cameraDetector" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cameraDetector"
+        android:name="com.example.baseapp.ui.camera.CameraDetectorFragment"
+        android:label="@string/title_camera_detector"
+        tools:layout="@layout/fragment_camera_detector" />
+
+    <!-- 无线安全检查：WiFi 与蓝牙可疑设备/热点检测 -->
+    <fragment
+        android:id="@+id/wirelessHome"
+        android:name="com.example.baseapp.ui.wireless.WirelessHomeFragment"
+        android:label="@string/title_wireless"
+        tools:layout="@layout/fragment_wireless_home">
+
+        <action
+            android:id="@+id/action_wirelessHome_to_wifiScan"
+            app:destination="@id/wifiScan" />
+
+        <action
+            android:id="@+id/action_wirelessHome_to_btScan"
+            app:destination="@id/btScan" />
+
+        <action
+            android:id="@+id/action_wirelessHome_to_networkCapture"
+            app:destination="@id/networkCapture" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/wifiScan"
+        android:name="com.example.baseapp.ui.wireless.WifiScanFragment"
+        android:label="@string/title_wifi_scan"
+        tools:layout="@layout/fragment_wifi_scan" />
+
+    <fragment
+        android:id="@+id/btScan"
+        android:name="com.example.baseapp.ui.wireless.BluetoothScanFragment"
+        android:label="@string/title_bt_scan"
+        tools:layout="@layout/fragment_bluetooth_scan" />
+
+    <!-- 网络请求抓取：基于 VpnService 的用户态转发，HTTP 解析内容，HTTPS 仅记录元数据 -->
+    <fragment
+        android:id="@+id/networkCapture"
+        android:name="com.example.baseapp.ui.netcapture.NetworkCaptureFragment"
+        android:label="@string/title_capture"
+        tools:layout="@layout/fragment_network_capture">
+
+        <action
+            android:id="@+id/action_networkCapture_to_captureDetail"
+            app:destination="@id/captureDetail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/captureDetail"
+        android:name="com.example.baseapp.ui.netcapture.CaptureDetailFragment"
+        android:label="@string/title_capture_detail"
+        tools:layout="@layout/fragment_capture_detail">
+
+        <argument
+            android:name="recordId"
+            app:argType="long" />
+    </fragment>
+
+    <!-- 传感器：陀螺仪、指南针、海拔、分贝与自检清单 -->
+    <fragment
+        android:id="@+id/sensorHome"
+        android:name="com.example.baseapp.ui.sensor.SensorHomeFragment"
+        android:label="@string/title_sensor"
+        tools:layout="@layout/fragment_sensor_home">
+
+        <action
+            android:id="@+id/action_sensorHome_to_gyroscope"
+            app:destination="@id/gyroscope" />
+
+        <action
+            android:id="@+id/action_sensorHome_to_compass"
+            app:destination="@id/compass" />
+
+        <action
+            android:id="@+id/action_sensorHome_to_altitude"
+            app:destination="@id/altitude" />
+
+        <action
+            android:id="@+id/action_sensorHome_to_soundLevel"
+            app:destination="@id/soundLevel" />
+
+        <action
+            android:id="@+id/action_sensorHome_to_sensorCheck"
+            app:destination="@id/sensorCheck" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/gyroscope"
+        android:name="com.example.baseapp.ui.sensor.GyroscopeFragment"
+        android:label="@string/title_sensor_gyro"
+        tools:layout="@layout/fragment_gyroscope" />
+
+    <fragment
+        android:id="@+id/compass"
+        android:name="com.example.baseapp.ui.sensor.CompassFragment"
+        android:label="@string/title_sensor_compass"
+        tools:layout="@layout/fragment_compass" />
+
+    <fragment
+        android:id="@+id/altitude"
+        android:name="com.example.baseapp.ui.sensor.AltitudeFragment"
+        android:label="@string/title_sensor_altitude"
+        tools:layout="@layout/fragment_altitude" />
+
+    <fragment
+        android:id="@+id/soundLevel"
+        android:name="com.example.baseapp.ui.sensor.SoundLevelFragment"
+        android:label="@string/title_sensor_sound"
+        tools:layout="@layout/fragment_sound_level" />
+
+    <fragment
+        android:id="@+id/sensorCheck"
+        android:name="com.example.baseapp.ui.sensor.SensorCheckFragment"
+        android:label="@string/title_sensor_check"
+        tools:layout="@layout/fragment_sensor_check" />
+
+    <!-- 设备信息：品牌型号、芯片、电池（含循环次数）、序列号与系统版本 -->
+    <fragment
+        android:id="@+id/deviceInfo"
+        android:name="com.example.baseapp.ui.device.DeviceInfoFragment"
+        android:label="@string/title_device"
+        tools:layout="@layout/fragment_device_info" />
+
+    <!-- 应用权限总览：列出本机应用并查看权限声明 -->
+    <fragment
+        android:id="@+id/appPermissionList"
+        android:name="com.example.baseapp.ui.apppermission.AppPermissionListFragment"
+        android:label="@string/title_app_permission"
+        tools:layout="@layout/fragment_app_permission_list">
+
+        <action
+            android:id="@+id/action_appPermissionList_to_appPermissionDetail"
+            app:destination="@id/appPermissionDetail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/appPermissionDetail"
+        android:name="com.example.baseapp.ui.apppermission.AppPermissionDetailFragment"
+        android:label="@string/title_app_permission"
+        tools:layout="@layout/fragment_app_permission_detail">
+
+        <argument
+            android:name="packageName"
+            app:argType="string" />
+
+        <argument
+            android:name="appLabel"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_files"
+        android:name="com.example.baseapp.ui.fileversion.FileLibraryFragment"
+        android:label="@string/title_files"
+        tools:layout="@layout/fragment_file_library">
+
+        <action
+            android:id="@+id/action_navigation_files_to_fileHistory"
+            app:destination="@id/fileHistory" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fileHistory"
+        android:name="com.example.baseapp.ui.fileversion.FileHistoryFragment"
+        android:label="@string/history_title"
+        tools:layout="@layout/fragment_file_history">
+
+        <argument
+            android:name="fileId"
+            app:argType="long" />
+
+        <argument
+            android:name="fileName"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_explore"

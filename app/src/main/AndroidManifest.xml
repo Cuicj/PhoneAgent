@@ -1,7 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+        应用权限总览需要读取本机全部已安装应用：
+        Android 11+ 默认只能看到有限应用，<queries> 仅能覆盖有启动图标的子集，
+        因此这里申请 QUERY_ALL_PACKAGES。本应用定位为本机工具类，
+        上架 Google Play 时需按「设备管理/工具」用途申报该权限。
+    -->
+    <uses-permission
+        android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+
+    <!-- 红外发射：仅声明权限，实际能力以 ConsumerIrManager.hasIrEmitter() 为准 -->
+    <uses-permission android:name="android.permission.TRANSMIT_IR" />
+
+    <!-- 相机模块（暗光检测）需要相机实时预览 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- 无线安全检查：WiFi 扫描（Android 13+ 使用 NEARBY_WIFI_DEVICES，低版本使用定位权限） -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission
+        android:name="android.permission.NEARBY_WIFI_DEVICES"
+        android:usesPermissionFlags="neverForLocation" />
+    <!-- 定位权限：旧版 WiFi 扫描使用，同时用于海拔页面的 GPS 高度回退 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!-- 无线安全检查：蓝牙扫描（Android 12+ 使用 BLUETOOTH_SCAN/CONNECT，低版本使用定位权限） -->
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_SCAN"
+        android:usesPermissionFlags="neverForLocation" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH"
+        android:maxSdkVersion="30" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_ADMIN"
+        android:maxSdkVersion="30" />
+
+    <!-- 传感器模块：分贝测量需要麦克风录音，仅前台使用 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <!-- 设备信息模块：尝试读取设备序列号；Android 10+ 普通应用通常仍返回 unknown -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- 网络请求抓取：用户态转发的代理 Socket 需要访问网络 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 读取当前网络 DNS，保证抓取期间域名解析正常 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 抓取期间以前台服务保持 tun 存活（Android 14+ 需要 specialUse 类型） -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <!-- Android 13+ 前台服务通知；被拒绝不影响抓取，仅通知不可见 -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- WiFi / 蓝牙均非必需，缺少硬件时页面给出说明而不是崩溃 -->
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.bluetooth"
+        android:required="false" />
+
+    <!-- 传感器与麦克风均非必需，保证无对应硬件的设备也能安装并查看说明 -->
+    <uses-feature
+        android:name="android.hardware.sensor.accelerometer"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.sensor.gyroscope"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.sensor.compass"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.sensor.barometer"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+
+    <!-- 红外与相机均非必需，保证无对应硬件的设备也能安装并查看说明 -->
+    <uses-feature
+        android:name="android.hardware.consumerir"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <!-- Android 11+ 包可见性：用于列出可授权查看图片的外部应用 -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:mimeType="image/*" />
+        </intent>
+    </queries>
 
     <application
+        android:name=".PhoneAgentApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -19,6 +118,27 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- 对外文件入口：调用方经此读取图片，按授权表放行并记录访问事件 -->
+        <provider
+            android:name=".data.FileAccessProvider"
+            android:authorities="com.example.baseapp.files"
+            android:exported="true"
+            android:grantUriPermissions="true" />
+
+        <!-- 网络请求抓取：通过 VpnService 建立 tun，转发逻辑在 net 包内 -->
+        <service
+            android:name=".net.CaptureVpnService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse"
+            android:permission="android.permission.BIND_VPN_SERVICE">
+            <intent-filter>
+                <action android:name="android.net.VpnService" />
+            </intent-filter>
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="vpn_capture" />
+        </service>
     </application>
 
 </manifest>

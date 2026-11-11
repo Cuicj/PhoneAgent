@@ -53,7 +53,8 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = navHostFragment.getNavController();
 
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_home, R.id.navigation_explore, R.id.navigation_profile)
+                R.id.navigation_home, R.id.navigation_files,
+                R.id.navigation_explore, R.id.navigation_profile)
                 .build();
 
         setSupportActionBar(binding.toolbar);

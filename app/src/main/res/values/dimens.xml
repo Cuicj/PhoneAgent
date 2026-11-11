@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 页面留白：全站统一 20dp 左右边距 -->
+    <dimen name="page_horizontal_padding">20dp</dimen>
+    <dimen name="page_top_padding">16dp</dimen>
+    <dimen name="page_bottom_padding">24dp</dimen>
+
+    <!-- 区块节奏：分组标题与上一区块、卡片之间 -->
+    <dimen name="section_spacing">22dp</dimen>
+    <dimen name="card_gap">12dp</dimen>
+
+    <!-- 卡片：统一圆角、描边与内边距 -->
+    <dimen name="card_corner_radius">16dp</dimen>
+    <dimen name="card_stroke_width">1dp</dimen>
+    <dimen name="card_content_padding">16dp</dimen>
+
+    <!-- 列表：条目内边距、条目间距与列表左右留白 -->
+    <dimen name="list_item_padding">14dp</dimen>
+    <dimen name="list_item_gap">10dp</dimen>
+    <dimen name="list_side_padding">16dp</dimen>
+
+    <!-- 标签：统一内边距与字号，避免多列标签换行错位 -->
+    <dimen name="badge_padding_horizontal">8dp</dimen>
+    <dimen name="badge_padding_vertical">3dp</dimen>
+    <dimen name="badge_text_size">11sp</dimen>
+
+    <!-- 入口文字：纯黑不加粗 -->
+    <dimen name="entry_text_size">16sp</dimen>
+    <dimen name="entry_link_text_size">15sp</dimen>
+</resources>

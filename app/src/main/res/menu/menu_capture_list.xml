@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- 右上角清除：纯文字入口，清除前会弹出确认 -->
+    <item
+        android:id="@+id/action_capture_clear"
+        android:title="@string/capture_clear"
+        app:showAsAction="always" />
+</menu>

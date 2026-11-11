@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 卡片基类：柔和浅底、16dp 圆角、1dp 描边、无阴影 -->
+    <style name="Widget.BaseApp.Card" parent="Widget.Material3.CardView.Filled">
+        <item name="cardBackgroundColor">@color/perm_page_soft</item>
+        <item name="cardCornerRadius">@dimen/card_corner_radius</item>
+        <item name="cardElevation">0dp</item>
+        <item name="strokeColor">?attr/colorOutlineVariant</item>
+        <item name="strokeWidth">@dimen/card_stroke_width</item>
+    </style>
+
+    <!-- 分组/说明卡片：浅色底 -->
+    <style name="Widget.BaseApp.Card.Soft" parent="Widget.BaseApp.Card" />
+
+    <!-- 列表条目卡片：白色底，与浅色分组卡片区分层级 -->
+    <style name="Widget.BaseApp.Card.Plain" parent="Widget.BaseApp.Card">
+        <item name="cardBackgroundColor">?attr/colorSurface</item>
+    </style>
+
+    <!-- 顶部栏标题：纯黑不加粗，字号略收，避免横屏时过大 -->
+    <style name="TextAppearance.BaseApp.ToolbarTitle" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textColor">@color/menu_text_black</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textFontWeight">400</item>
+    </style>
+
+    <!-- 分组小标题：纯黑、不加粗、字号收敛，避免与页面标题争层级 -->
+    <style name="TextAppearance.BaseApp.GroupTitle" parent="TextAppearance.Material3.TitleSmall">
+        <item name="android:textColor">@color/menu_text_black</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textFontWeight">400</item>
+    </style>
+
+    <!-- 卡片标题：纯黑不加粗，显式指定常规字重，避免系统标题字体偏粗 -->
+    <style name="TextAppearance.BaseApp.CardTitle" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textColor">@color/menu_text_black</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textFontWeight">400</item>
+    </style>
+
+    <!-- 纯文字入口 -->
+    <style name="TextAppearance.BaseApp.Entry" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textColor">@color/menu_text_black</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/entry_text_size</item>
+    </style>
+
+    <!-- 标签统一内边距与字号，长文本单行截断 -->
+    <style name="Widget.BaseApp.Badge" parent="">
+        <item name="android:paddingStart">@dimen/badge_padding_horizontal</item>
+        <item name="android:paddingTop">@dimen/badge_padding_vertical</item>
+        <item name="android:paddingEnd">@dimen/badge_padding_horizontal</item>
+        <item name="android:paddingBottom">@dimen/badge_padding_vertical</item>
+        <item name="android:textSize">@dimen/badge_text_size</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+</resources>

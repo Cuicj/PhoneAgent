@@ -8,4 +8,22 @@
     <color name="brand_on_secondary">#FFFFFF</color>
     <color name="brand_secondary_container">#C2E7FF</color>
     <color name="brand_on_secondary_container">#001D35</color>
+
+    <!-- 版本操作标签配色：回退使用暖色，删除使用浅红，避免与主色混淆 -->
+    <color name="op_revert_container">#FFE1B3</color>
+    <color name="op_on_revert_container">#4A2B00</color>
+    <color name="op_delete_container">#F9DEDC</color>
+    <color name="op_on_delete_container">#601410</color>
+    <color name="timeline_deleted">#9AA0A6</color>
+
+    <!-- 外部访问事件配色：中性灰，与版本操作标签区分 -->
+    <color name="access_container">#E8EAED</color>
+    <color name="on_access_container">#3C4043</color>
+
+    <!-- 应用权限总览：菜单/入口文字使用纯黑且不加粗 -->
+    <color name="menu_text_black">#000000</color>
+    <color name="perm_page_soft">#F5F7FB</color>
+
+    <!-- 网络抓取：失败/错误状态文字，避免使用绿色 -->
+    <color name="capture_error">#B3261E</color>
 </resources>
